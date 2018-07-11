@@ -2,24 +2,13 @@
 <html lang="fr" dir="ltr">
 <head>
   <meta charset="utf-8" />
-  <script src="assets/js/script.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
-  <title>Exercice 1</title>
+  <title>Exercice 2</title>
 </head>
-<body ng-app>
-  <form name="myForm">
-    <label>E-mail</label>
-    <input ng-keyup="225" name="email" type="text" placeholder="Email" ng-model="email" required />
-    <pre>myForm.email.$error = {{ myForm.email.$error | json }}</pre>
-    <div ng-messages="myForm.email.$error" style="color:red" role="alert">
-      <div ng-message="!keyup">Votre email n'est pas valide</div>
-    </div>
-    <div ng-messages="myForm.email.$error" style="color:green" role="alert">
-      <div ng-message="keyup">Email valide</div>
-    </div>
-    <div ng-controller="check">
-    <button ng-click="check()">Validez</button>
-  </div>
-  </form>
+<body ng-app="alert">
+  <div ng-controller="alertCtrl">
+  <button ng-click="check()">Press</button>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>

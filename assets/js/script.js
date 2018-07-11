@@ -1,6 +1,6 @@
-var app = angular.module('ngMessagesExample', ['ngMessages']);
-function check($window, $scope) {
-  $scope.hello = function() {
-    $window.alert($scope.email)
-  }
-}
+angular.module('alert', [])
+.controller('alertCtrl', function($scope) {
+  $scope.check = function() {
+    alert('une boite');
+};
+});
