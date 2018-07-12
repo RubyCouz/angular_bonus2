@@ -1,6 +1,7 @@
-angular.module('alert', [])
-.controller('alertCtrl', function($scope) {
-  $scope.check = function() {
-    alert('une boite');
+var box = angular.module('alert', [])
+box.controller('alertCtrl', ['$scope', '$window' function($scope, $window) {
+  £scope.message = 'une boite';
+  $scope.check = function(messageAlert) {
+    $window.alert(messageAlert);
 };
-});
+}]);
